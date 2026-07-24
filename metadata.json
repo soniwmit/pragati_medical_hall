@@ -1,0 +1,6 @@
+{
+  "name": "Pragati Medical Hall",
+  "description": "Your Trusted Medical Store for Genuine Medicines & Healthcare Needs in Kurtha, Bihar. Opposite Sadar Hospital.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

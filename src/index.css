@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary: #0A8F6A;
+    --primary-hover: #077355;
+    --primary-light: #E6F4F0;
+    --medical-blue: #0056B3;
+    --medical-blue-dark: #00428A;
+    --medical-green: #0A8F6A;
+    --bg-main: #F1F5F9;
+    --bg-gray: #F1F5F9;
+    --text-main: #1E293B;
+    --text-muted: #64748B;
+    --card-bg: #FFFFFF;
+    --border-color: #E2E8F0;
+  }
+
+  .dark {
+    --bg-main: #0F172A;
+    --bg-gray: #1E293B;
+    --text-main: #F8FAFC;
+    --text-muted: #94A3B8;
+    --card-bg: #1E293B;
+    --border-color: #334155;
+    --primary-light: #0D2D25;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+}
+
+/* Bento Card Style */
+.bento-card {
+  background: var(--card-bg);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03), 0 2px 4px -2px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  transition: all 0.25s ease-in-out;
+}
+
+.bento-card:hover {
+  box-shadow: 0 10px 25px -5px rgba(0, 86, 179, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #0056B3;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.dark .section-label {
+  color: #38BDF8;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background-color: #0A8F6A;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.cat-pill {
+  background: var(--bg-gray);
+  padding: 12px 16px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.cat-pill:hover {
+  border-color: #0056B3;
+  background: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(0, 86, 179, 0.08);
+}
+
+.dark .cat-pill:hover {
+  background: #1E293B;
+  border-color: #38BDF8;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+::-webkit-scrollbar-thumb {
+  background: #0A8F6A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #077355;
+}
+
+/* Glassmorphism utils */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark .glass-card {
+  background: rgba(30, 41, 59, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Custom shadow */
+.shadow-medical {
+  box-shadow: 0 10px 30px -10px rgba(10, 143, 106, 0.15);
+}
+
+.dark .shadow-medical {
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
