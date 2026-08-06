@@ -175,14 +175,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenWhatsAppModal 
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <p>
             © {new Date().getFullYear()} {STORE_INFO.name} ({STORE_INFO.altName}). All rights reserved. Developed by{' '}
-            <a
-              href="https://main.webmakerit.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-emerald-400 hover:text-emerald-300 font-semibold underline transition"
-            >
-              WMIT
-            </a>
+           <a href="#" className="wmit-popup-trigger hover:text-white underline transition-colors" target="_blank" rel="noopener noreferrer">Developed by WMIT</a>
             .
           </p>
 
